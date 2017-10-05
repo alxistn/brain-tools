@@ -5,7 +5,7 @@ import {
 
 import DrawerIcon from "../../components/android/DrawerIcon";
 import AbstractFinanceTabNavigator from "./AbstractFinanceTabNavigator";
-import DrawerItemIcon from "../../components/android/DrawerItemIcon";
+import NewEntryFinanceScreen from "./NewEntryFinanceScreen";
 
 const AbstractFinanceStackNavigator = StackNavigator({
     Finance: {
@@ -21,6 +21,19 @@ const AbstractFinanceStackNavigator = StackNavigator({
             }
         })
     },
+    NewEntry: {
+        screen: NewEntryFinanceScreen,
+        navigationOptions: ({ navigation }) => ({
+            title: 'New Entry',
+            headerStyle: {
+                backgroundColor: "#26418f",
+            },
+            headerTintColor: '#ffffff',
+            headerTitleStyle: {
+                color: "#ffffff"
+            }
+        })
+    }
 });
 
 export default AbstractFinanceStackNavigator;
